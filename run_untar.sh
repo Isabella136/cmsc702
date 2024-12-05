@@ -17,7 +17,7 @@ do
     tar xvzf 0${i}.tar.gz 
 
 done;
-for i in {10..50};
+for i in {10..20};
 do 
     tar xvzf ${i}.tar.gz 
 
@@ -29,7 +29,7 @@ do
     tar xvzf 0${i}.tar.gz 
 
 done;
-for i in {10..50};
+for i in {10..20};
 do 
     tar xvzf ${i}.tar.gz 
 
@@ -41,7 +41,7 @@ do
     tar xvzf 0${i}.tar.gz 
 
 done;
-for i in {10..50};
+for i in {10..20};
 do 
     tar xvzf ${i}.tar.gz 
 
@@ -53,7 +53,7 @@ do
     tar xvzf 0${i}.tar.gz 
 
 done;
-for i in {10..50};
+for i in {10..20};
 do 
     tar xvzf ${i}.tar.gz 
 
@@ -65,7 +65,7 @@ do
     tar xvzf 0${i}.tar.gz 
 
 done;
-for i in {10..50};
+for i in {10..20};
 do 
     tar xvzf ${i}.tar.gz 
 
@@ -77,7 +77,7 @@ do
     tar xvzf 0${i}.tar.gz 
 
 done;
-for i in {10..50};
+for i in {10..20};
 do 
     tar xvzf ${i}.tar.gz 
 
@@ -89,7 +89,7 @@ do
     tar xvzf 0${i}.tar.gz 
 
 done;
-for i in {10..50};
+for i in {10..20};
 do 
     tar xvzf ${i}.tar.gz 
 
@@ -101,7 +101,7 @@ do
     tar xvzf 0${i}.tar.gz 
 
 done;
-for i in {10..50};
+for i in {10..20};
 do 
     tar xvzf ${i}.tar.gz 
 
@@ -113,7 +113,7 @@ do
     tar xvzf 0${i}.tar.gz 
 
 done;
-for i in {10..50};
+for i in {10..20};
 do 
     tar xvzf ${i}.tar.gz 
 

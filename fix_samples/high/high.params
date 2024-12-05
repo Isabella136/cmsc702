@@ -3,13 +3,13 @@ Global settings:
 --------------------
 
 Trees:
-	-Species trees: 50 Birth-death simulations
+	-Species trees: 20 Birth-death simulations
 		-Speciation rate: Uniform[1.000000e-06,1.000000e-06)
 		-Extinction rate: Fixed 0.000000e+00,
 		-Outgroup addition:
 			-Ingroup divergence/divergence to the ingroup ratio: Uniform[1,1)
 		-Stopping rules:
-			-Number of leaves: Uniform[200,200]
+			-Number of leaves: Uniform[50,50]
 			-Generations: Uniform[2000000,2000000)
 	-Locus trees: Uniform[1000,1000] directly obtained from each species tree (no birth-death process)
 
