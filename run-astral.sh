@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#SBATCH --job-name=simphy_tree_gen
-#SBATCH --output=log/simphy_tree_gen.out.%j
-#SBATCH --error=log/simphy_tree_gen.err.%j
+#SBATCH --job-name=astral-multi
+#SBATCH --output=log/astral-multi.out.%j
+#SBATCH --error=log/astral-multi.err.%j
 #SBATCH --time=12:00:00
 #SBATCH --qos=high
 #SBATCH --nodes=1
