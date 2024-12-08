@@ -26,7 +26,7 @@ SAMPLES=("fixed_samples" "biased_samples" "unbiased_samples")
 LEVELS=("low" "mid" "high")
 
 # Iterate over dataset indices, levels, and sample folders
-for idx in {2..20}; do
+for idx in {4..20}; do
     for level in "${LEVELS[@]}"; do
         for sample in "${SAMPLES[@]}"; do
             # Construct paths
@@ -36,9 +36,18 @@ for idx in {2..20}; do
 
             # Check if the input files exist before running the command
             if [[ -f "$DATA_PATH/all_trees.tree" && -f "$DATA_PATH/name_map.txt" ]]; then
-                printf "Starting: $DATA_PATH at [%s] %s\n" "$(date +'%Y-%m-%d %H:%M:%S')"
-                java -jar "$ASTRAL_PATH" -i "$DATA_PATH/all_trees.tree" -a "$DATA_PATH/name_map.txt" -o "$RESULT_PATH" 2>"$LOG_PATH"
-                printf "Completed: $DATA_PATH at [%s] %s\n" "$(date +'%Y-%m-%d %H:%M:%S')"
+                printf "Submitting: $DATA_PATH at [%s] %s\n" "$(date +'%Y-%m-%d %H:%M:%S')"
+                sbatch --job-name="tree_qmc_${folder_name}" \
+                    --output="log/astral_${folder_name}.out.%j" \
+                    --error="log/tree_qmc_${folder_name}.err.%j" \
+                    --time=12:00:00 \
+                    --nodes=1 \
+                    --ntasks=1 \
+                    --mem=16gb \
+                    --partition=class \
+                    --account=class \
+                    --wrap="\
+                   java -jar \"$ASTRAL_PATH\" -i \"$DATA_PATH/all_trees.tree\" -a \"$DATA_PATH/name_map.txt\" -o \"$RESULT_PATH\" 2>\"$LOG_PATH\""
             else
                 echo "Skipping: $DATA_PATH (missing input files)"
             fi
