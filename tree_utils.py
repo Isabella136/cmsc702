@@ -5,7 +5,7 @@ import collections
 
 import treeswift
 
-Accumulator: typing.TypeAlias = typing.Mapping[str, typing.Set[str]]
+Accumulator = typing.Mapping[str, typing.Set[str]]
 
 read_newick_tree: typing.Callable[[str], treeswift.Tree] = functools.partial(
     treeswift.read_tree, schema="newick"
