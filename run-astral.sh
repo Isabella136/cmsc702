@@ -13,7 +13,7 @@
 
 # Set the base directories
 ASTRAL_PATH="/fs/class-projects/fall2024/cmsc702/c702g000/ASTRAL"
-RESULT_DIR="results/astral-multi"
+RESULT_DIR="/fs/class-projects/fall2024/cmsc702/c702g000/results/astral-multi"
 OUTPUT_DIR="$RESULT_DIR/output"
 LOG_DIR="$RESULT_DIR/logs"
 
