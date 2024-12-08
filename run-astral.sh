@@ -1,7 +1,18 @@
 #!/bin/bash
 
+#SBATCH --job-name=simphy_tree_gen
+#SBATCH --output=log/simphy_tree_gen.out.%j
+#SBATCH --error=log/simphy_tree_gen.err.%j
+#SBATCH --time=12:00:00
+#SBATCH --qos=high
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --mem=16gb
+#SBATCH --partition=class
+#SBATCH --account=class
+
 # Set the base directories
-ASTRAL_PATH="../astral-home/astral.5.7.8.jar"
+ASTRAL_PATH="/fs/class-projects/fall2024/cmsc702/c702g000/ASTRAL"
 RESULT_DIR="results/astral-multi"
 OUTPUT_DIR="$RESULT_DIR/output"
 LOG_DIR="$RESULT_DIR/logs"
@@ -15,7 +26,7 @@ SAMPLES=("fixed_samples" "biased_samples" "unbiased_samples")
 LEVELS=("low" "mid" "high")
 
 # Iterate over dataset indices, levels, and sample folders
-for idx in {1..2}; do
+for idx in {2..20}; do
     for level in "${LEVELS[@]}"; do
         for sample in "${SAMPLES[@]}"; do
             # Construct paths
